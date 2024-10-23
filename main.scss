@@ -40,7 +40,6 @@ body {
 .person {
   display: grid;
   padding: 10px;
-  // transform: 1s scale;
 
   &:hover {
     background-color: var(--background-color-hover);
