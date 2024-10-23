@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --grid-columns-tablet: repeat(2, 1fr);
+  --grid-columns-desktop: repeat(4, 1fr);
+  --grid-column-gap: 40px 30px;
+  --main-text-color: #000;
+  --main-text-size: 20px;
+  --background-color-hover: #eee;
+}
+
+body {
+  color: var(--main-text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--main-text-size);
+  margin: 0;
+}
+
+.people {
+  gap: var(--grid-column-gap);
+  grid-template-columns: var(--grid-columns-tablet);
+  justify-content: center;
+  align-items: center;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 30px 35px;
+  display: grid;
+}
+
+@media (width >= 1000px) {
+  .people {
+    grid-template-columns: var(--grid-columns-desktop);
+    max-width: 970px;
+    padding: 30px 55px;
+  }
+}
+
+.person {
+  padding: 10px;
+  display: grid;
+}
+
+.person:hover {
+  background-color: var(--background-color-hover);
+  border-radius: 10px;
+}
+
+.person__photo-wrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.person__photo {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 8px;
+  transition: all 1s;
+}
+
+.person__photo:hover {
+  transform: 1s;
+  border-radius: 60px;
+}
+
+.person__rank {
+  text-align: center;
+  color: #8b0000;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 18.4px;
+  display: flex;
+  position: absolute;
+  right: 10px;
+}
+
+.person__details--wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.person__name {
+  text-align: center;
+  color: #2f4f4f;
+  cursor: pointer;
+  margin-bottom: 9px;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.person__extra {
+  text-align: center;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 20.7px;
+  display: flex;
+  transform: scale(1);
+}
+
+.person__extra:hover .person__extra__extra {
+  transform: scale(1.2);
+}
+
+.person__sport {
+  display: block;
+}
+
+.person__sport:after {
+  content: ",";
+}
+
+.person__pay {
+  display: block;
+}
+
+.person__pay:before {
+  content: "$";
+}
+
+.person__pay:after {
+  content: "M";
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
